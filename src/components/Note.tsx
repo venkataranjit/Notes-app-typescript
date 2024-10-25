@@ -1,14 +1,22 @@
-import React from "react";
-
-const Note = () => {
+import React, { FC } from "react";
+import { NOTETYPE } from "../models/NOTETYPE";
+const Note: FC<NOTETYPE> = (props) => {
   return (
     <>
       <div className="card">
-        <div className="card-heading bg-primary">
-          <h4>Hello</h4>
+        <div
+          className={`card-heading text-white ${
+            props.priority === "high"
+              ? "bg-danger"
+              : props.priority === "medium"
+              ? "bg-warning"
+              : props.priority == "low" && "bg-success"
+          } `}
+        >
+          <h6>{props.title}</h6>
         </div>
         <div className="card-body">
-          <p>Helo faofh oa fjjg kln</p>
+          <p>{props.desc}</p>
         </div>
       </div>
     </>

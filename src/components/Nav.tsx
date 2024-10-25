@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
-const Nav = () => {
+const Nav: FC = () => {
   return (
     <>
       <nav

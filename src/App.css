@@ -1,11 +1,12 @@
 .card {
   .card-heading {
-    /* background: $indigo; */
     text-align: center;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    padding-top: 5px;
   }
-  /* .success {
-    background: $indigo;
-  } */
+  .card-body {
+    height: 160px;
+    padding: 10px;
+  }
 }
